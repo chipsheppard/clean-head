@@ -1,4 +1,4 @@
-#Clean Head#
+# Clean Head #
 
 Contributors: chip sheppard
 Tags: header links, emojis, gdpr, disable
@@ -10,7 +10,7 @@ Stable tag: 1.0
 This plugin disables relational links, WP version, wlwmanifest_link, shortlink, previous/next post links, and the new WordPress emoji functionality. GDPR friendly.
 
 
-##Description##
+## Description ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 This plugin removed un-needed links in the header and disables the new WordPress emoji functionality. GDPR friendly.
@@ -18,13 +18,13 @@ This plugin removed un-needed links in the header and disables the new WordPress
 
 Note: Emoticons will still work and emoji's will still work in browsers which have built in support for them. This plugin simply removes the extra code bloat used to add support for emoji's in older browsers.
 
-##GDPR compliancy##
+## GDPR compliancy ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 This plugin does not do anything to make your site less GDPR compliant. It disables the DNS prefetching of emoji's within WordPress, which should ensure improved privacy. To determine if your site is GDPR compliant, please seek legal advice. I have done my best to ensure the plugin is 100% GDPR compliant, but I am not a lawyer so can not guarantee anything ;)
 
 
-##Installation##
+## Installation ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 After you've downloaded and extracted the files:
@@ -34,14 +34,14 @@ After you've downloaded and extracted the files:
 3. And yer done!
 
 
-##Changelog##
+## Changelog ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 **1.0 - September 2018**
  First deploy to GIT
 
 
-##Credits##
+## Credits ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 * Emoji filters from the "Disable Emojis" plugin by Ryan Hellyer https://geek.hellyer.kiwi
