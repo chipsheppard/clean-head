@@ -43,8 +43,6 @@ remove_action( 'wp_head', 'start_post_rel_link' );
 remove_action( 'wp_head', 'index_rel_link' );
 remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 
-// Remove WP Version number.
-remove_action( 'wp_head', 'wp_generator' );
 // Remove wlwmanifest_link.
 remove_action( 'wp_head', 'wlwmanifest_link' );
 // Remove shortlink.
@@ -53,9 +51,18 @@ remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 /**
+ * Remove WP Version number.
+ * remove_action( 'wp_head', 'wp_generator' ); doesn't remove from RSS
+ */
+function ch_remove_version() {
+	return '';
+}
+add_filter( 'the_generator', 'ch_remove_version' );
+
+/**
  * Disable the emoji's
  */
-function disable_emojis() {
+function ch_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -66,7 +73,7 @@ function disable_emojis() {
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	add_filter( 'wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2 );
 }
-add_action( 'init', 'disable_emojis' );
+add_action( 'init', 'ch_disable_emojis' );
 
 /**
  * Filter function used to remove the tinymce emoji plugin.
